@@ -26,7 +26,7 @@ for path,page in pages.items():
         assert dest.is_file(), f'Broken link: {path}: {url}'
         if parsed.fragment: assert unquote(parsed.fragment) in pages[dest].ids, f'Broken fragment: {url}'
         count+=1
-assert len(pages)==6
+assert len(pages)==7
 research=(ROOT/'research/index.html').read_text()
 assert 'not an accepted publication' in research
 thesis=(ROOT/'research/thesis/index.html').read_text()

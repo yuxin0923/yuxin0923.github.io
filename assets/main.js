@@ -16,3 +16,12 @@ function updateThemeLabel() { theme.setAttribute('aria-label', `Switch to ${curr
 theme.addEventListener('click', () => { const next = currentTheme() === 'dark' ? 'light' : 'dark'; document.documentElement.dataset.theme = next; try { localStorage.setItem('theme', next); } catch { /* Theme still works without storage. */ } updateThemeLabel(); });
 systemTheme.addEventListener('change', updateThemeLabel);
 updateThemeLabel();
+
+// Branch-hosted static sites can receive the original portrait without a rebuild.
+const pendingPortrait = document.querySelector('.portrait-pending');
+if (pendingPortrait) {
+  const portrait = new Image(192, 192);
+  portrait.alt = 'Xin Yu';
+  portrait.addEventListener('load', () => pendingPortrait.replaceWith(portrait));
+  portrait.src = '/assets/portrait.jpg';
+}

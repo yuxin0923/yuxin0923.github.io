@@ -14,3 +14,13 @@ Incremental changes preserve the original implementation commit `ed43752`:
 Remaining author checks: exact official award wording; public redacted CV/thesis; manuscript author list and public link. The expected Columbia completion date from the original brief is retained; the CV lists September 2026–present.
 
 Reporting cautions: Table 3's generation-success percentage has an unclear denominator; it is not repeated on the website. Table 6 describes 8,456 sampled pairs for ablations while Table 3 gives approximately 7,500 final training samples; both stages are distinguished without inventing an exact per-run training count. CV claims and thesis results are summarized as author-reported, not independently reproduced experiments.
+
+## Reference-led redesign review
+
+Rechecked the newly supplied versions of the same CV and thesis. Added a separate Publications page and six research cards, with specific techniques and reported outcomes rather than marketing descriptions. The manuscript remains under review. The thesis project page retains the Qwen3-8B judge protocol, CHAIRs/recall trade-off, and unconfirmed award wording. A public CV download remains pending; the original PDFs and phone number are not published.
+
+The requested new portrait is visible in the chat but no downloadable original image file was present among the provided file attachments (two PDFs). The draft therefore uses a clearly labelled placeholder, with a compact CSS crop prepared for the original JPG. This is the only remaining asset prerequisite.
+
+## Portrait received
+
+The original JPG was subsequently received in the supplied ZIP and saved, byte-for-byte, as `assets/portrait.jpg`. The missing-asset prerequisite above is resolved. A CSS display crop centers the face in a small circle without generating or retouching the source image. Desktop/mobile and no-JavaScript image loading were verified.

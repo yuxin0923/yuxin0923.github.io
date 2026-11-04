@@ -7,7 +7,7 @@ with sync_playwright() as p:
     page=browser.new_page(viewport={'width':1440,'height':1000},device_scale_factor=1)
     errors=[]
     page.on('pageerror',lambda error:errors.append(str(error)))
-    for route in ['/','/research/','/research/thesis/','/experience/','/about/','/contact/']:
+    for route in ['/','/research/','/research/thesis/','/publications/','/experience/','/about/','/contact/']:
         response=page.goto('http://127.0.0.1:8000'+route)
         assert response.status==200
         assert page.locator('h1').count()==1
@@ -20,7 +20,7 @@ with sync_playwright() as p:
     assert page.locator('html').get_attribute('data-theme')=='dark'
     page.get_by_role('button',name='Switch to light mode').click()
     page.set_viewport_size({'width':390,'height':844})
-    for route in ['/','/research/','/research/thesis/','/experience/','/about/','/contact/']:
+    for route in ['/','/research/','/research/thesis/','/publications/','/experience/','/about/','/contact/']:
         page.goto('http://127.0.0.1:8000'+route)
         assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'),route
     page.goto('http://127.0.0.1:8000/')
@@ -40,4 +40,4 @@ with sync_playwright() as p:
     page.locator('svg').screenshot(path=str(ROOT/'assets/social.png'))
     assert not errors, errors
     browser.close()
-    print('PASS: 6 desktop/mobile routes; no overflow or JS errors; menu, Escape, navigation, and persistent theme.')
+    print('PASS: 7 desktop/mobile routes; no overflow or JS errors; menu, Escape, navigation, and persistent theme.')
