@@ -24,3 +24,9 @@ The requested new portrait is visible in the chat but no downloadable original i
 ## Portrait received
 
 The original JPG was subsequently received in the supplied ZIP and saved, byte-for-byte, as `assets/portrait.jpg`. The missing-asset prerequisite above is resolved. A CSS display crop centers the face in a small circle without generating or retouching the source image. Desktop/mobile and no-JavaScript image loading were verified.
+
+The author confirmed the three research appointments are at Central South University. Their institutional identity is now separated from linked group names and advisor names. Links were recovered from PDF annotations rather than guessed from text extraction. Company logos remain the sole incomplete visual detail: both source destinations are blocked by the environment's network policy. Generic internship icons are retained transparently pending authentic assets.
+
+## Author biography clarification
+
+Added a three-paragraph About Me biography on Home and About: Columbia M.S. in Artificial Intelligence; CSU B.S. with First-Class Honours; research with Jinpeng Wang in CSU-JPG; collaborations with Lei Wang and Min Li; interests in vision-language models, data-centric AI, and reinforcement learning. The author explicitly confirmed that the university–industry verification project with Lei Wang's group and Hunan Jiace Test is now used in a factory. No deployment scale, customer count, production performance, or additional impact metric is inferred. Advisor/group links come from CV annotations. The full wording distinguishes current group membership from past collaborations.

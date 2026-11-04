@@ -304,3 +304,45 @@ html[data-theme=dark] .publication { background:rgba(32,47,72,.9); box-shadow:no
  .education-band { grid-template-columns:1fr; gap:22px; padding:22px 20px; margin-bottom:22px; }
  .focus-summary { border-left:0; padding-left:0; padding-top:20px; border-top:1px solid var(--line); }
 }
+/* Reference-style affiliation rows: identity and group, advisor, then summary. */
+.experience-section { display:grid; grid-template-columns:210px minmax(0,1fr); gap:34px; }
+.experience-section-label { padding-top:24px; }
+.experience-section-label .eyebrow { font-size:10px; margin-bottom:10px; }
+.experience-section-label h2 { font-size:26px; }
+.experience-section .appointment { grid-template-columns:54px minmax(0,1fr); gap:20px; padding:26px 0; }
+.experience-section .institution-icon { width:54px; height:54px; padding:6px; }
+.experience-section .institution-icon img { width:42px; height:42px; }
+.appointment-topline { display:flex; justify-content:space-between; align-items:baseline; gap:18px; margin-bottom:5px; }
+.appointment-topline h3 { font-size:17px; line-height:1.6; margin:0; }
+.institution-name { color:var(--ink); text-decoration:none; font-weight:650; }
+.institution-name:hover { color:var(--accent); }
+.group-link { color:var(--muted); font-weight:450; text-decoration:underline; text-decoration-color:var(--line); }
+.group-link:hover { color:var(--accent); text-decoration-color:var(--accent); }
+.institution-divider { color:var(--muted); font-weight:400; }
+.appointment-date { flex-shrink:0; color:var(--muted); font:10px/1.6 ui-monospace,monospace; text-transform:uppercase; padding-top:4px; }
+.appointment-position { font-size:12px; margin-bottom:12px; color:var(--muted); }
+.appointment-position a { color:inherit; text-decoration-color:var(--line); }
+.appointment-description { font-size:14px; line-height:1.8; margin-bottom:0; }
+@media(max-width:1100px) { .experience-section { grid-template-columns:170px minmax(0,1fr); gap:25px; } .appointment-topline { flex-direction:column; gap:1px; } .appointment-date { padding-top:0; } }
+@media(max-width:700px) {
+ .experience-section { display:block; }
+ .experience-section-label { padding-top:0; padding-bottom:8px; }
+ .experience-section-label h2 { margin-bottom:15px; }
+ .experience-section .appointment { grid-template-columns:44px minmax(0,1fr); gap:14px; padding:24px 0; }
+ .experience-section .institution-icon { width:44px; height:44px; padding:5px; }
+ .experience-section .institution-icon img { width:34px; height:34px; }
+ .appointment-topline h3 { font-size:16px; }
+ .appointment-position { font-size:11px; }
+ .appointment-description { font-size:13px; }
+}
+.about-introduction { display:grid; grid-template-columns:210px minmax(0,1fr); gap:34px; }
+.about-introduction h2 { font-size:26px; }
+.bio-copy { max-width:850px; }
+.bio-copy p { font-size:15px; line-height:1.95; margin-bottom:20px; }
+.bio-copy p:last-child { margin-bottom:0; }
+.bio-copy a { font-weight:550; text-decoration-color:var(--line); }
+.bio-copy a:hover { text-decoration-color:var(--accent); }
+@media(max-width:700px) { .about-introduction { display:block; } .bio-copy p { font-size:14px; line-height:1.9; } }
+/* Preserve the complete user-supplied lab mark and its lettering. */
+.institution-icon:has(img[src$="csu-jpg.png"]) { padding:0; overflow:hidden; }
+.institution-icon img[src$="csu-jpg.png"] { width:100%; height:100%; object-fit:contain; }
